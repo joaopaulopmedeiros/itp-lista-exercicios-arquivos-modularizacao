@@ -1,3 +1,5 @@
+# Como compilar
+
 ```
 gcc simplelib.c -c -g -W        
 ```

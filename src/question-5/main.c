@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "simplelib.c"
+#include "simplelib.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,6 +12,6 @@ int main(int argc, char *argv[])
 
     int largest = getLargestValueFromArray(arr);
     printf("Find largest value from array: %d\n", largest);
-    
+
     return 0;
 }

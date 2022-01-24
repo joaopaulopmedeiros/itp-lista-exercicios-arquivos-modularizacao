@@ -3,7 +3,7 @@
 ## 📜 Descrição
 Resolução da lista de exercícios com temática "Arquivos e Modularização" da disciplina de ITP.
 
-## Soluções
+## 🤓 Soluções
 - [Questão 01](/src/question-1/response.md)
 - [Questão 02](/src/question-2/)
 - [Questão 03](/src/question-3/)

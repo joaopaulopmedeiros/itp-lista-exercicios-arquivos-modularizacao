@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include <time.h>
 #include <string.h>
 
 int strEquals(char a[], char b[])  
@@ -20,15 +20,34 @@ int strEquals(char a[], char b[])
     return equals; 
 }  
 
+char* currentDateTime()
+{    
+    time_t now;
+
+    time(&now);
+
+    return ctime(&now);
+}
+
+void logMessage(char* message) {
+    FILE* file = fopen("./log.txt", "a+");
+    fprintf(file, "%s%s\n", currentDateTime(), message);
+    fclose(file);
+}
+
 int main(int argc, char *argv[])
 {
     char* keyBoardCommand;
     char* exitCommand = "SAIR";
 
+    logMessage("Inicio");
+
     while(scanf("%s", keyBoardCommand) && strEquals(keyBoardCommand, exitCommand) != 1)
     {
-        printf("Mocked process...\n");
+        printf("\nMocked process...\n");
     }
+
+    logMessage("Fim");
 
     return 0;
 }

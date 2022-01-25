@@ -3,6 +3,8 @@
 
 int main(int argc, char *argv[])
 {
+    char result[2];
+
     FILE *file;
 
     file = fopen(argv[1], "rb");
@@ -13,20 +15,10 @@ int main(int argc, char *argv[])
       exit(EXIT_FAILURE);
     }
 
-    fseek(file, 2, SEEK_SET);
-
-    int length = ftell(file); 
-
-    rewind(file);
-
-    char* buffer = (char *) malloc(length * sizeof(char));
-
-    fread(buffer, length, 1, file);
-
-    printf("Dois primeiros bytes de arquivo: %hhx", buffer);
-
-    free(buffer);
+    fgets(result, 2, file);
     
+    printf("%s", result);
+
     fclose(file);
 
     return 0;

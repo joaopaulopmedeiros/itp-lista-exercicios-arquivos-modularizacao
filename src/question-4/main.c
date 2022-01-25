@@ -35,7 +35,7 @@ void logMessage(char* message) {
     fclose(file);
 }
 
-int main(int argc, char *argv[])
+int main(void)
 {
     char* keyBoardCommand;
     char* exitCommand = "SAIR";

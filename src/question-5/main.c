@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "simplelib.h"
 
-int main(int argc, char *argv[])
+int main(void)
 {
     printf("This project uses simplelib - version %s\n", SIMPLE_LIB_VERSION);
     

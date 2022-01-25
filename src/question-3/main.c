@@ -5,25 +5,23 @@
 int main(int argc, char *argv[])
 {
     char ch;
-    char sourceFilePath[20] = argv[1];
-    char targetFilePath[20] = argv[2];
     
     FILE *sourceFile, *targetFile;
 
-    sourceFile = fopen(sourceFilePath, "r");
+    sourceFile = fopen(argv[1], "r");
  
     if(sourceFile == NULL)
     {
-      printf("Pressione qualquer tecla para sair...\n");
+      printf("[source file] Encerrando aplicação por falta de caminho fornecido...\n");
       exit(EXIT_FAILURE);
     }
  
-    targetFile = fopen(targetFilePath, "w");
+    targetFile = fopen(argv[2], "w");
  
     if(targetFile == NULL)
     {
       fclose(sourceFile);
-      printf("Pressione qualquer tecla para sair...\n");
+      printf("[target file] Encerrando aplicação por falta de caminho fornecido...\n");
       exit(EXIT_FAILURE);
     }
  
